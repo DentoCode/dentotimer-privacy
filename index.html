@@ -97,7 +97,7 @@
 
   <!-- ===================== ENGLISH ===================== -->
   <section class="card en" id="en" lang="en" dir="ltr">
-    <span class="meta">Last updated: October 2, 2026</span>
+    <span class="meta">Last updated: October 6, 2026</span>
     <p class="intro">DentoTimer ("the App") is a toothbrushing timer for children and families, developed by DentoCode ("we", "us").</p>
 
     <div class="badges">
@@ -132,7 +132,10 @@
     <h2>7. Changes to This Policy</h2>
     <p>We may update this policy from time to time. The latest version will always be available on this page, with the updated date shown above.</p>
 
-    <h2>8. Contact Us</h2>
+    <h2 id="rights">8. Your Rights</h2>
+    <p>Because the App does not collect your data or store it on any server, there is nothing for us to access, export, correct, or delete on our side. All App data stays on your device, and you can erase it at any time by clearing the App's data in your device settings or by uninstalling the App. If you have any request or question about your data, contact us at the email below.</p>
+
+    <h2>9. Contact Us</h2>
     <div class="contact">
       If you have any questions, contact us at:
       <a href="mailto:dentocode3010@gmail.com">dentocode3010@gmail.com</a>
@@ -141,7 +144,7 @@
 
   <!-- ===================== ARABIC ===================== -->
   <section class="card ar" id="ar" lang="ar" dir="rtl">
-    <span class="meta">آخر تحديث: 2 أكتوبر 2026</span>
+    <span class="meta">آخر تحديث: 6 أكتوبر 2026</span>
     <p class="intro">تطبيق DentoTimer ("التطبيق") هو تايمر لتنظيف الأسنان للأطفال والعائلة، من تطوير DentoCode ("نحن").</p>
 
     <div class="badges">
@@ -176,7 +179,10 @@
     <h2>7. التغييرات على هذه السياسة</h2>
     <p>قد نحدّث هذه السياسة من وقت لآخر، وستجد أحدث نسخة دائمًا في هذه الصفحة مع تاريخ التحديث أعلاه.</p>
 
-    <h2>8. التواصل معنا</h2>
+    <h2 id="rights-ar">8. حقوقك</h2>
+    <p>بما أن التطبيق لا يجمع بياناتك ولا يخزنها على أي خادم، فلا توجد لدينا بيانات يمكن الاطلاع عليها أو تصديرها أو تصحيحها أو حذفها من جهتنا. كل بيانات التطبيق تبقى على جهازك، ويمكنك مسحها في أي وقت من إعدادات الجهاز (مسح بيانات التطبيق) أو بإلغاء تثبيته. لأي طلب أو استفسار بخصوص بياناتك تواصل معنا على البريد أدناه.</p>
+
+    <h2>9. التواصل معنا</h2>
     <div class="contact">
       لأي استفسار تواصل معنا على:
       <a href="mailto:dentocode3010@gmail.com" dir="ltr">dentocode3010@gmail.com</a>
@@ -200,6 +206,8 @@
   (function(){
     var l = 'en';
     try { l = localStorage.getItem('lang') || ((navigator.language||'').indexOf('ar') === 0 ? 'ar' : 'en'); } catch(e){}
+    if (location.hash === '#rights-ar') l = 'ar';
+    if (location.hash === '#rights') l = 'en';
     setLang(l);
   })();
 </script>
